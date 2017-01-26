@@ -1,9 +1,9 @@
 import argparse
 from collections import Counter, defaultdict
-
+from operator import itemgetter
 import random
-import numpy
-from numpy import median
+import numpy as np
+from numpy import median, array
 from sklearn.neighbors import BallTree
 
 class Numbers:
@@ -56,7 +56,10 @@ class Knearest:
 
         :param item_indices: The indices of the k nearest neighbors
         """
-        assert len(item_indices) == self._k, "Did not get k inputs"
+
+        
+
+        assert len(item_indices[0]) == self._k, "Did not get k inputs"
 
         # Finish this function to return the most common y label for
         # the given indices.  The current return value is a placeholder 
@@ -64,7 +67,22 @@ class Knearest:
         #
         # http://docs.scipy.org/doc/numpy/reference/generated/numpy.median.html
 
-        return self._y[item_indices[0]]
+
+        count = {}
+        for item in item_indices[0]: 
+            indice = int(item)
+            if self._y[indice] in count: 
+                count[self._y[indice]] += 1
+            else:
+                count[self._y[indice]] = 1
+        count = sorted(count.items(), key=lambda x:x[1], reverse=True)
+
+        common = count[0][0]
+        
+        if len(count) > 1 and count[0][1] == count[1][1]:
+            common = median([count[0][0], count[1][0]])
+        
+        return common
 
     def classify(self, example):
         """
@@ -74,13 +92,16 @@ class Knearest:
         format as training data
         """
 
+        # look for nearest neighbor method in Balltree -> use query
+
         # Finish this function to find the k closest points, query the
         # majority function, and return the predicted label.
         # Again, the current return value is a placeholder 
         # and definitely needs to be changed. 
 
-        return self.majority(list(random.randrange(len(self._y)) \
-                                  for x in xrange(self._k)))
+        dist, ind =  (self._kdtree.query([example], k=self._k)) #get indices
+        maj = self.majority(ind)    #get majority of indices
+        return maj
 
     def confusion_matrix(self, test_x, test_y):
         """
@@ -100,6 +121,8 @@ class Knearest:
         d = defaultdict(dict)
         data_index = 0
         for xx, yy in zip(test_x, test_y):
+            est_y = self.classify(xx)
+            d[yy][est_y] = d[yy].get(est_y, 0) + 1
             data_index += 1
             if data_index % 100 == 0:
                 print("%i/%i for confusion matrix" % (data_index, len(test_x)))
