@@ -28,7 +28,11 @@
 | 02.17        | 		         | 			   | 									 |			|         	| 
 | 02.20        | Mohri 2         | 			   | Learning Theory Part 1			     |          |			| 
 | 02.22        | Mohri 3.2-3.3   | 			   | Learning Theory Part 2				 |	 		|			| 
+<<<<<<< HEAD
 | 02.24        | 		         | 			   |  									 |			| FeatEngr	| 
+=======
+| 02.24        | 		         | 			   |  									 |			| [FeatEngr](https://github.com/chrisketelsen/courses/blob/master/csci5622/homework/feature_engineering/assign.md)	| 
+>>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
 | 02.27        | [Burges](http://research.microsoft.com/en-us/um/people/cburges/papers/svmtutorial.pdf) 1, 3.1-3.2 												 |	     	   | Hard-Margin SVMs 					 |	    	|			| 
 | 03.01        | 				 | 			   | Guest Speaker 						 |	 		|			| 
 | 03.03        | 		         | 			   |  									 |			| [Proposal](https://github.com/chrisketelsen/courses/blob/master/csci5622/project/assign.md)											| 
