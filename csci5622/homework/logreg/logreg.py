@@ -1,14 +1,8 @@
 import random
 import argparse
-<<<<<<< HEAD
 import numpy as np
 from numpy import zeros, sign 
 from math import exp, log, floor
-=======
-
-from numpy import zeros, sign 
-from math import exp, log
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
 from collections import defaultdict
 
 
@@ -39,7 +33,6 @@ class Example:
         """
         Create a new example
 
-<<<<<<< HEAD
         :param label: The label (0 / 1) of the example (i.e. binary classifier)
         :param words: The words in a list of "word:count" format (words in the doc) 
         :param vocab: The vocabulary to use as features (list) (features)
@@ -57,25 +50,6 @@ class Example:
 
 class LogReg:
     def __init__(self, num_features, lam, eta=lambda x: 0.1):       
-=======
-        :param label: The label (0 / 1) of the example
-        :param words: The words in a list of "word:count" format
-        :param vocab: The vocabulary to use as features (list)
-        """
-        self.nonzero = {}
-        self.y = label
-        self.x = zeros(len(vocab))
-        for word, count in [x.split(":") for x in words]:
-            if word in vocab:
-                assert word != kBIAS, "Bias can't actually appear in document"
-                self.x[vocab.index(word)] += float(count)
-                self.nonzero[vocab.index(word)] = word
-        self.x[0] = 1
-
-
-class LogReg:
-    def __init__(self, num_features, lam, eta=lambda x: 0.1):
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
         """
         Create a logistic regression classifier
 
@@ -84,15 +58,9 @@ class LogReg:
         :param eta: A function that takes the iteration as an argument (the default is a constant value)
         """
         
-<<<<<<< HEAD
         self.w = zeros(num_features)    #create a list of zeros w/the number of features
         self.lam = lam                  #regularization parameter 
         self.eta = eta                  #set to 0.1
-=======
-        self.w = zeros(num_features)
-        self.lam = lam
-        self.eta = eta
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
         self.last_update = defaultdict(int)
 
         assert self.lam>= 0, "Regularization parameter must be non-negative"
@@ -108,33 +76,20 @@ class LogReg:
         logprob = 0.0
         num_right = 0
         for ex in examples:
-<<<<<<< HEAD
             p = sigmoid(self.w.dot(ex.x))   #calc the sigmoid of the feature vector evaluated at example xs
             if ex.y == 1:
                 logprob += log(p)       
-=======
-            p = sigmoid(self.w.dot(ex.x))
-            if ex.y == 1:
-                logprob += log(p)
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
             else:
                 logprob += log(1.0 - p)
 
             # Get accuracy
             if abs(ex.y - p) < 0.5:
-<<<<<<< HEAD
                 num_right += 1      # if within 0.5, model is correct
 
         return logprob, float(num_right) / float(len(examples))
 
 
 
-=======
-                num_right += 1
-
-        return logprob, float(num_right) / float(len(examples))
-
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
     def sg_update(self, train_example, iteration, use_tfidf=False):
         """
         Compute a stochastic gradient update to improve the log likelihood.
@@ -145,7 +100,6 @@ class LogReg:
         :return: Return the new value of the regression coefficients
         """
         
-<<<<<<< HEAD
         
         # TODO: Implement updates in this function
         if iteration > 0:
@@ -164,11 +118,6 @@ class LogReg:
 
         return self.w
         
-=======
-        # TODO: Implement updates in this function
-
-        return self.w
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
 
 def eta_schedule(iteration):
     # TODO (extra credit): Update this function to provide an
@@ -229,7 +178,6 @@ if __name__ == "__main__":
     print("Read in %i train and %i test" % (len(train), len(test)))
 
     # Initialize model
-<<<<<<< HEAD
     lr = LogReg(len(vocab), args.lam, lambda x: 0.05) 
 
     print(args.eta)
@@ -237,13 +185,6 @@ if __name__ == "__main__":
     # Iterations
     iteration = 0
     for pp in xrange(1):
-=======
-    lr = LogReg(len(vocab), args.lam, lambda x: args.eta)
-
-    # Iterations
-    iteration = 0
-    for pp in xrange(args.passes):
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
         random.shuffle(train)
         for ex in train:
             lr.sg_update(ex, iteration)
@@ -253,7 +194,6 @@ if __name__ == "__main__":
                 print("Update %i\tTP %f\tHP %f\tTA %f\tHA %f" %
                       (iteration, train_lp, ho_lp, train_acc, ho_acc))
             iteration += 1
-<<<<<<< HEAD
 
     print sorted(lr.w)
     midpoint = floor(len(lr.w)/2)
@@ -270,5 +210,3 @@ if __name__ == "__main__":
     motorcycles = np.argsort(lr.w)[-15:]
     for elem in motorcycles:
         print vocab[elem]
-=======
->>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
