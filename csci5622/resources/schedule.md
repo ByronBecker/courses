@@ -26,6 +26,7 @@
 | 02.13        | ESL 3.1-3.2	 | 			   | Regression 			      		 |	[slides](http://grandmaster.colorado.edu/~cketelsen/files/csci5622/slides/lesson08.pdf)/[vids](https://www.youtube.com/playlist?list=PLnGW93UbO5LwR6IVtKAqSlzy4PjscOG1E)										   |		   | 
 | 02.15        | ESL 3.4		 |             | Regularization						 |  [slides](http://grandmaster.colorado.edu/~cketelsen/files/csci5622/slides/lesson09.pdf)/[vids](https://www.youtube.com/playlist?list=PLnGW93UbO5Lwll_CxrMufMPNv6hH7g1Eg)       |			| 
 | 02.17        | 		         | 			   | 									 |			|         	| 
+<<<<<<< HEAD
 | 02.20        | Mohri 2         | 			   | Learning Theory Part 1			     |          |			| 
 | 02.22        | Mohri 3.2-3.3   | 			   | Learning Theory Part 2				 |	 		|			| 
 <<<<<<< HEAD
@@ -34,12 +35,18 @@
 | 02.24        | 		         | 			   |  									 |			| [FeatEngr](https://github.com/chrisketelsen/courses/blob/master/csci5622/homework/feature_engineering/assign.md)	| 
 >>>>>>> 0d0e58ce763d79aafd5ebb6bd545ed97201d29ee
 | 02.27        | [Burges](http://research.microsoft.com/en-us/um/people/cburges/papers/svmtutorial.pdf) 1, 3.1-3.2 												 |	     	   | Hard-Margin SVMs 					 |	    	|			| 
+=======
+| 02.20        | [Mohri 2](https://piazza.com/class_profile/get_resource/ixrtksejs0v6pp/izbrfxujamyrv)   														         | 			   | Learning Theory Part 1			     |   [slides](http://grandmaster.colorado.edu/~cketelsen/files/csci5622/slides/lesson10.pdf)/[vids](https://www.youtube.com/playlist?list=PLnGW93UbO5LxcXiFx1Nd14BnmxhYgYvx4)      |			| 
+| 02.22        | [Mohri 3.2-3.3](https://piazza.com/class_profile/get_resource/ixrtksejs0v6pp/izbrfxujamyrv) 														     | 			   | Learning Theory Part 2				 |	 [slides](http://grandmaster.colorado.edu/~cketelsen/files/csci5622/slides/lesson11.pdf)/[vids](https://www.youtube.com/playlist?list=PLnGW93UbO5LwkHDDVrVrd2lrpq2VFLZgT)		|			| 
+| 02.24        | 		         | 			   |  									 |			| [FeatEngr](https://github.com/chrisketelsen/courses/blob/master/csci5622/homework/feature_engineering/assign.md)	| 
+| 02.27        | [Burges](https://www.microsoft.com/en-us/research/publication/a-tutorial-on-support-vector-machines-for-pattern-recognition/) 1, 3.1-3.2 		  |	     	    | Hard-Margin SVMs 	                  |	[slides](http://grandmaster.colorado.edu/~cketelsen/files/csci5622/slides/lesson12.pdf)/[vids](https://www.youtube.com/playlist?list=PLnGW93UbO5LyG2L7vKvw6BVqMHHI1oQPK)    	|			| 
+>>>>>>> c4baa751885c52ec944361b7ed91655f6bd6afef
 | 03.01        | 				 | 			   | Guest Speaker 						 |	 		|			| 
 | 03.03        | 		         | 			   |  									 |			| [Proposal](https://github.com/chrisketelsen/courses/blob/master/csci5622/project/assign.md)											| 
-| 03.06        | [Burges](http://research.microsoft.com/en-us/um/people/cburges/papers/svmtutorial.pdf) 3.4 													 | [Platt](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/smo-book.pdf)												   | Soft-Margin SVMs    				 | 			|			| 
-| 03.08        | [Burges](http://research.microsoft.com/en-us/um/people/cburges/papers/svmtutorial.pdf) 4 														 | 			   | The Kernel Trick 					 |	 		|			| 
-| 03.10        | 		         | 			   |  									 |			| Learning 	| 
-| 03.13        | 			     | 			   | Review								 |			|			| 
+| 03.06        | [Burges](https://www.microsoft.com/en-us/research/publication/a-tutorial-on-support-vector-machines-for-pattern-recognition/) 3.4 													 | [Platt](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/smo-book.pdf)												   | Soft-Margin SVMs    				 | 			|			| 
+| 03.08        | [Burges](https://www.microsoft.com/en-us/research/publication/a-tutorial-on-support-vector-machines-for-pattern-recognition/) 4 														 | 			   | The Kernel Trick 					 |	 		|			| 
+| 03.10        | 		         | 			   |  									 |			| [Learning](https://github.com/chrisketelsen/courses/blob/master/csci5622/homework/learnability/assign.md) 	| 
+| 03.13        | 			     | 			   | [Review](https://github.com/chrisketelsen/courses/blob/master/csci5622/exam/midterm_info.md)								 |			|			| 
 | 03.15        | 			     | 			   | Midterm							 |			|			| 
 | 03.17        | 		         | 			   | 									 |			| 			| 
 | 03.20        | ISL 8.1   		 | ISL 8.2	   | Decision Trees						 |	        | 			| 

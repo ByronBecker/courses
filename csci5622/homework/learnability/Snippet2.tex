@@ -1,0 +1,18 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\begin{document}
+\noindent
+Therefore, we can see a somewhat binary pattern emerging, almost one like the one in bits. As we increase by 2, we see higher "level" i bits turn to False (meaning the function evaluates to less than 0 at that point, just like in binary). Looking at this pattern one can see that for each false or -1 result, we have a $$ \sum\limits_{i=1}^n 2^i $$ pattern emerging where the i's are the subset of numbers associated in tuples with the false (or -1) classification. \\
+
+\noindent
+To then make sure that I was shifting the period of the wave by a correct amount in all cases I followed the sum pattern I found in the excel sheet jpg, and made sure to shift the period of the sin wave by the maximum i (or minimum i depending on how you look at it) as follows $$ w = (\sum\limits_{i=1}^n 2^i) + 2^{-n} $$ where again the i's are the subset of numbers associated in tuples with the false (or -1) classification. I found that both from my testing using wolfram alpha and in the provided tests that this $2^{-n}$ provided a sufficient shift to the left as the shift of the period as it would shift from including that point in the positive class to the negative class. \\
+
+\noindent
+{\Large 4 Distinct Points that Cannot Be Shattered?}\\
+
+\noindent
+Since a sine wave has a consistent period, we can assume that for any x,  $f(x) == f(x + multiple*period)$ of the sine wave. Therefore, given the points $x=\frac{1}{2}, 1, \frac{3}{2}$, and 2, if we classify $\frac{1}{2}$, 1, and 2 as false but $\frac{3}{2}$ as true, if we set the period to $w = 2\pi + 2^{-1}$ to correctly classify the point at $x=\frac{1}{2}$, we will incorrectly classify the point at $x = \frac{3}{2}$ because they are separated exactly by some period multiple of the sin wave.
+\end{document}

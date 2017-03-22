@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[usenames]{color} %used for font color
+\usepackage{amssymb} %maths
+\usepackage{amsmath} %maths
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
+\begin{document}
+\[\noindent
+{\huge Problem 3} \\
+
+\noindent 
+\textbf{My Intuition}
+
+\noindent
+If we have data points j = 0 to n, then for their positions i, all data points $$x_{i} = 2^{-i}$$ gives an infinite possible number of points between 0 and 1.
+\noindent
+For our hypothesis $h_{w}(x)$, looking at the function $y = \sin(wx)$, w relates to the period of our sine wave by $p = \frac{2\pi}{w}$. This means that $y = \sin(\pi x)$ has a period of 2. \\
+
+\noindent
+Looking further at the function, we can see that for multiples of 2, our function will pass through the points $ x = 2^{-i}$ at $y = 0$. This means that if we are to correctly classify points with
+
+$$ if \quad y = sin(wx) < 0\quad then\; -1\; or \; False $$
+$$ \noindent else\quad 1\; or\; True $$ \\
+
+\noindent
+then we have to implement a shift in the period with a small enough magnitude to not incorrectly classify our smallest points. To do this, I looked at the graph of $y = \sin(2\pi x)$ and then implemented an initial shift to the period of 0.01 by changing the equation to $y = \sin((2\pi + 0.01) x)$. Looking in excel at different points $\frac{1}{2}, \frac{1}{4}, \frac{1}{8},$ and $\frac{1}{16}$ classified by different functions based on $y = \sin(wx)$ with $$ w = (\sum\limits_{i=1}^n 2^i) + 2^{n} $$ I found the following pattern.
+
+
+
+\]
+\end{document}
